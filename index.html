@@ -10,26 +10,28 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #0f172a; scroll-behavior: smooth; }
         .glass-card { background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .accent-blue { color: #60a5fa; }
         .section-title { border-left: 4px solid #3b82f6; padding-left: 1rem; }
     </style>
 </head>
 <body class="text-slate-300 antialiased">
 
-
     <header class="bg-slate-900/50 border-b border-slate-800 py-16 px-6">
         <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
-            <img src="foto-perfil.png" alt="Enrique Mejías" class="w-44 h-44 rounded-2xl object-cover shadow-2xl border-2 border-slate-700">
+            <div class="w-44 h-44 rounded-2xl overflow-hidden border-2 border-slate-700 shadow-2xl flex-shrink-0">
+                <img src="foto-perfil.png" alt="Enrique Mejías" class="w-full h-full object-cover">
+            </div>
+            
             <div class="text-center md:text-left flex-1">
                 <h1 class="text-4xl font-bold text-white mb-2">Enrique Mejías Valero</h1>
-                <p class="text-blue-400 text-xl font-medium mb-4 uppercase tracking-widest">Analista de Datos Junior | Business Analyst Junior</p>
+                <p class="text-blue-400 text-xl font-medium mb-4 uppercase tracking-widest leading-tight">
+                    Analista de Datos Junior | Business Analyst Junior
+                </p>
                 
                 <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-6 text-sm text-slate-400">
                     <span class="flex items-center gap-2"><i class="fas fa-id-card text-blue-500"></i> Carnet B</span>
                     <span class="flex items-center gap-2"><i class="fas fa-car text-blue-500"></i> Coche propio</span>
                     <span class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-blue-500"></i> Zaragoza, España</span>
                 </div>
-
 
                 <div class="flex flex-wrap justify-center md:justify-start gap-3">
                     <a href="mailto:eamveurope@gmail.com" class="bg-white/5 hover:bg-white/10 text-white border border-white/20 px-5 py-2 rounded-lg transition flex items-center gap-2">
@@ -46,23 +48,19 @@
         </div>
     </header>
 
-
     <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
-
 
         <section class="glass-card p-8 rounded-2xl">
             <h2 class="text-2xl font-bold text-white mb-4 section-title">Perfil Profesional</h2>
-            <div class="space-y-4 leading-relaxed text-slate-300">
-                <p>Analista de Datos Junior con sólida base en contabilidad, operaciones y logística, y formación técnica en informática e inteligencia artificial aplicada. Experiencia real en el análisis, limpieza e interpretación de datos operativos y financieros, apoyando la toma de decisiones y la optimización de procesos en entornos empresariales.</p>
-                <p>He trabajado con <strong>Excel avanzado, Google Sheets y sistemas ERP (SAP, NUBOX)</strong> para el análisis de KPIs, elaboración de reportes, control financiero y seguimiento operativo.</p>
-                <p>Actualmente me encuentro en formación especializada en análisis de datos y Business Intelligence, trabajando con <strong>Power BI, SQL y Python</strong>, así como en el desarrollo de soluciones web y aplicaciones básicas para la visualización y explotación de datos.</p>
+            <div class="space-y-4 leading-relaxed">
+                <p>Analista de Datos Junior con sólida base en contabilidad, operaciones y logística, y formación técnica en informática e inteligencia artificial aplicada. Experiencia real en el análisis, limpieza e interpretación de datos operativos y financieros.</p>
+                <p>He trabajado con <strong>Excel avanzado, Google Sheets y sistemas ERP (SAP, NUBOX)</strong> para el análisis de KPIs, elaboración de reportes y control financiero.</p>
+                <p>Actualmente me encuentro en formación especializada en <strong>Power BI, SQL y Python</strong> para la visualización y explotación masiva de datos.</p>
             </div>
         </section>
 
-
         <section class="space-y-8">
             <h2 class="text-2xl font-bold text-white mb-6 section-title">Experiencia Profesional</h2>
-
 
             <div class="glass-card p-8 rounded-2xl">
                 <div class="flex flex-col md:flex-row justify-between mb-4 border-b border-slate-700 pb-4">
@@ -73,150 +71,125 @@
                     <span class="text-slate-500 font-mono text-sm mt-2 uppercase">Ago 2021 – Ago 2022</span>
                 </div>
                 <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <p class="text-xs font-bold uppercase text-slate-500 mb-2">Responsabilidades:</p>
-                        <ul class="text-sm space-y-2">
-                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Registro y análisis del ciclo contable en ERP SAP.</li>
-                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Ejecución de cierres contables mensuales y variaciones.</li>
-                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Elaboración de reportes financieros y gerenciales.</li>
-                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Conciliaciones bancarias y control presupuestario.</li>
-                        </ul>
-                    </div>
-                    <div class="bg-blue-600/5 p-4 rounded-xl border border-blue-600/20">
-                        <p class="text-xs font-bold uppercase text-blue-400 mb-2 font-bold">Logros destacados:</p>
-                        <ul class="text-sm italic space-y-1">
-                            <li>- Reducción tiempo de cierre mensual en 25%.</li>
-                            <li>- Disminución de errores en nómina en 90%.</li>
-                            <li>- Optimización de conciliación bancaria en 30%.</li>
-                        </ul>
+                    <ul class="text-sm space-y-2">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Registro y análisis del ciclo contable en ERP SAP.</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Conciliaciones bancarias y control presupuestario.</li>
+                    </ul>
+                    <div class="bg-blue-600/5 p-4 rounded-xl border border-blue-600/20 text-sm italic">
+                        Logros: Reducción tiempo de cierre -25% | Errores nómina -90% | Eficiencia +30%
                     </div>
                 </div>
             </div>
 
-
-            <div class="glass-card p-8 rounded-2xl border-l-4 border-l-green-600">
+            <div class="glass-card p-8 rounded-2xl border-l-4 border-l-green-600 text-sm">
                 <div class="flex flex-col md:flex-row justify-between mb-4">
                     <h3 class="text-xl font-bold text-green-400">Ejecutivo Multicanal – Datos Operativos</h3>
-                    <span class="text-slate-500 font-mono text-sm">Ene 2020 – Ene 2021</span>
+                    <span class="text-slate-500 font-mono uppercase mt-2 md:mt-0 text-xs md:text-sm">Ene 2020 – Ene 2021</span>
                 </div>
                 <p class="text-white mb-4 italic">Randstad Chile S.A.</p>
-                <div class="grid md:grid-cols-2 gap-6 text-sm">
-                    <ul class="space-y-2">
-                        <li><i class="fas fa-database text-green-600 mr-2"></i> Gestión y limpieza de bases en Excel/Sheets.</li>
-                        <li><i class="fas fa-chart-line text-green-600 mr-2"></i> Análisis de desempeño e identificación de tendencias.</li>
-                    </ul>
-                    <div class="bg-green-600/5 p-4 rounded-xl border border-green-600/20">
-                        <p class="text-xs font-bold uppercase text-green-400 mb-2 font-bold">Logros:</p>
-                        <p class="italic">Mejora eficiencia reportes +40% | Productividad +28% | Tiempo análisis -35%</p>
-                    </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <p><i class="fas fa-database text-green-600 mr-2"></i> Gestión y limpieza de bases en Excel/Sheets. Análisis de KPIs.</p>
+                    <p class="bg-green-600/5 p-3 rounded-lg border border-green-600/20 italic">Eficiencia reportes +40% | Productividad +28%</p>
                 </div>
             </div>
-
 
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="glass-card p-6 rounded-2xl">
-                    <h3 class="font-bold text-white">TXT Logística (España)</h3>
-                    <p class="text-blue-400 text-sm mb-4 italic">Jun 2025 – Sep 2025</p>
-                    <ul class="text-xs space-y-2 text-slate-400">
-                        <li>• Control y análisis de incidencias operativas.</li>
-                        <li>• Logro: Respuesta al cliente +35% y Satisfacción 92%.</li>
-                    </ul>
+                    <h3 class="font-bold text-white uppercase text-xs tracking-widest text-blue-400 mb-2">TXT Logística (España)</h3>
+                    <p class="text-slate-500 text-[10px] mb-3">Jun 2025 – Sep 2025</p>
+                    <p class="text-sm text-slate-300">Control de incidencias operativas. Logro: Respuesta +35% y Satisfacción 92%.</p>
                 </div>
                 <div class="glass-card p-6 rounded-2xl border-l-4 border-l-orange-600">
-                    <h3 class="font-bold text-white">Amazon Road Spain</h3>
-                    <p class="text-orange-400 text-sm mb-4 italic">Oct 2025 – Ene 2026</p>
-                    <ul class="text-xs space-y-2 text-slate-400">
-                        <li>• Uso de WMS y tecnología de escaneo de inventarios.</li>
-                        <li>• Logro: 98% precisión y +15% objetivos diarios.</li>
-                    </ul>
+                    <h3 class="font-bold text-white uppercase text-xs tracking-widest text-orange-400 mb-2">Amazon Road Spain</h3>
+                    <p class="text-slate-500 text-[10px] mb-3">Oct 2025 – Ene 2026</p>
+                    <p class="text-sm text-slate-300">Uso de WMS y escaneo. Logro: 98% precisión y +15% objetivos diarios.</p>
                 </div>
             </div>
 
-
-            <div class="glass-card p-8 rounded-2xl border-t-2 border-t-blue-500">
-                <h3 class="text-xl font-bold text-white mb-2">Analista Contable – Pintuvial C.A. (Venezuela)</h3>
-                <p class="text-slate-500 text-sm mb-6 uppercase tracking-widest">Oct 2012 – Mar 2019 | ERP NUBOX</p>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="bg-slate-800 p-4 rounded-xl text-center">
-                        <p class="text-blue-400 font-bold text-xl">12</p>
-                        <p class="text-[10px] text-slate-500 mt-1 italic">Licitaciones</p>
+            <div class="glass-card p-8 rounded-2xl border-l-4 border-l-blue-500 relative overflow-hidden">
+                <i class="fas fa-file-invoice-dollar absolute -bottom-4 -right-4 text-white/5 text-9xl"></i>
+                <div class="flex flex-col md:flex-row justify-between mb-6 border-b border-slate-700/50 pb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Analista Contable Senior <span class="text-blue-400">| ERP NUBOX</span></h3>
+                        <p class="text-slate-300 font-medium mt-1">Pintuvial C.A. (Venezuela)</p>
                     </div>
-                    <div class="bg-slate-800 p-4 rounded-xl text-center">
-                        <p class="text-blue-400 font-bold text-xl">USD 2.5M</p>
-                        <p class="text-[10px] text-slate-500 mt-1 italic text-wrap">Adjudicados</p>
+                    <span class="text-blue-400 text-xs font-mono border border-blue-600/30 px-3 py-1 rounded-full h-fit mt-3 md:mt-0 w-fit">Oct 2012 – Mar 2019</span>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 space-y-4 text-sm">
+                        <p class="text-slate-400">Análisis de datos contables, financieros y de costos. Preparación técnica para auditorías y licitaciones.</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Ciclo contable completo y tributos.</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Análisis de costos e inventarios.</li>
+                        </ul>
                     </div>
-                    <div class="bg-slate-800 p-4 rounded-xl text-center">
-                        <p class="text-blue-400 font-bold text-xl">45%</p>
-                        <p class="text-[10px] text-slate-500 mt-1 italic text-wrap">Optimización</p>
-                    </div>
-                    <div class="bg-slate-800 p-4 rounded-xl text-center">
-                        <p class="text-blue-400 font-bold text-xl">0</p>
-                        <p class="text-[10px] text-slate-500 mt-1 italic">Audit. OK</p>
+                    <div class="space-y-2">
+                        <div class="bg-white/5 border border-white/10 p-2 rounded-lg">
+                            <p class="text-lg font-bold text-white">$2.5M <span class="text-[10px] text-blue-400">USD</span></p>
+                            <p class="text-[9px] text-slate-500 uppercase">12 Licitaciones ganadas</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-2 rounded-lg">
+                            <p class="text-lg font-bold text-white">45%</p>
+                            <p class="text-[9px] text-slate-500 uppercase">Ahorro en conciliación</p>
+                        </div>
+                        <div class="bg-green-600/10 border border-green-600/20 p-2 rounded-lg text-center">
+                            <p class="text-[10px] text-green-400 font-bold italic">Cero observaciones Auditoría</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="glass-card p-6 rounded-2xl flex justify-between items-center">
                 <div>
                     <h3 class="font-bold text-white italic text-lg">Inversor Financiero Digital</h3>
-                    <p class="text-slate-500 text-sm">Binance (Remoto) | 2021 – Actualidad</p>
+                    <p class="text-slate-500 text-[10px] uppercase">Binance | 2021 – Actualidad</p>
                 </div>
                 <i class="fab fa-bitcoin text-yellow-500/20 text-4xl"></i>
             </div>
         </section>
 
-
-        <section>
-            <h2 class="text-2xl font-bold text-white mb-8 section-title">Habilidades & Tecnología</h2>
-            <div class="grid md:grid-cols-3 gap-6 text-center">
-                <div class="glass-card p-6 rounded-2xl">
-                    <i class="fas fa-microchip text-blue-400 text-3xl mb-4"></i>
-                    <h4 class="font-bold text-white mb-2 uppercase text-xs tracking-widest">Tecnología e IA</h4>
-                    <p class="text-xs text-slate-400">ChatGPT, Gemini, Claude, NotebookLM, Perplexity. IA aplicada a productividad.</p>
-                </div>
-                <div class="glass-card p-6 rounded-2xl">
-                    <i class="fas fa-chart-pie text-purple-400 text-3xl mb-4"></i>
-                    <h4 class="font-bold text-white mb-2 uppercase text-xs tracking-widest">Análisis y BI</h4>
-                    <p class="text-xs text-slate-400">Excel Avanzado, Power BI, SQL, Python (Inicial), ERP SAP/NUBOX.</p>
-                </div>
-                <div class="glass-card p-6 rounded-2xl">
-                    <i class="fas fa-language text-green-400 text-3xl mb-4"></i>
-                    <h4 class="font-bold text-white mb-2 uppercase text-xs tracking-widest">Idiomas</h4>
-                    <p class="text-xs text-slate-400">Español (Nativo) e Inglés (Intermedio).</p>
-                </div>
+        <section class="grid md:grid-cols-3 gap-6 text-center">
+            <div class="glass-card p-6 rounded-2xl">
+                <i class="fas fa-microchip text-blue-400 text-3xl mb-4"></i>
+                <h4 class="font-bold text-white mb-2 uppercase text-xs tracking-widest">IA e Innovación</h4>
+                <p class="text-xs text-slate-400">ChatGPT, Claude, IA aplicada a productividad y análisis.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl">
+                <i class="fas fa-chart-pie text-purple-400 text-3xl mb-4"></i>
+                <h4 class="font-bold text-white mb-2 uppercase text-xs tracking-widest">Análisis y BI</h4>
+                <p class="text-xs text-slate-400">Excel Avanzado, Power BI, SQL, Python (Inicial), SAP/NUBOX.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl">
+                <i class="fas fa-language text-green-400 text-3xl mb-4"></i>
+                <h4 class="font-bold text-white mb-2 uppercase text-xs tracking-widest">Idiomas</h4>
+                <p class="text-xs text-slate-400">Español (Nativo) | Inglés (Intermedio).</p>
             </div>
         </section>
 
-
-        <section>
-            <h2 class="text-2xl font-bold text-white mb-8 section-title">Educación</h2>
-            <div class="grid md:grid-cols-2 gap-4 text-sm">
-                <div class="glass-card p-4 rounded-xl border-l-4 border-l-blue-500">
-                    <h4 class="font-bold text-white">IA Generativa y Análisis de Datos</h4>
-                    <p class="text-slate-500 italic">Grupo Piquer, INAEM (2026)</p>
-                </div>
-                <div class="glass-card p-4 rounded-xl">
-                    <h4 class="font-bold text-white">Licenciatura en Contaduría Pública</h4>
-                    <p class="text-slate-500 italic">Universidad de Carabobo (2014)</p>
-                </div>
-                <div class="glass-card p-4 rounded-xl">
-                    <h4 class="font-bold text-white">Técnico Medio en Informática</h4>
-                    <p class="text-slate-500 italic">Escuela Técnica Privada Maracay (2007)</p>
-                </div>
-                <div class="glass-card p-4 rounded-xl">
-                    <h4 class="font-bold text-white">Gestión de Almacenes (Nivel 3)</h4>
-                    <p class="text-slate-500 italic">ACF Innove, INAEM (2025)</p>
-                </div>
+        <section class="grid md:grid-cols-2 gap-4 text-sm">
+            <div class="glass-card p-4 rounded-xl border-l-4 border-l-blue-500">
+                <h4 class="font-bold text-white">IA Generativa y Análisis de Datos</h4>
+                <p class="text-slate-500 italic">Grupo Piquer, INAEM (2026)</p>
+            </div>
+            <div class="glass-card p-4 rounded-xl">
+                <h4 class="font-bold text-white">Licenciatura en Contaduría Pública</h4>
+                <p class="text-slate-500 italic">Universidad de Carabobo (2014)</p>
+            </div>
+            <div class="glass-card p-4 rounded-xl">
+                <h4 class="font-bold text-white">Técnico Medio en Informática</h4>
+                <p class="text-slate-500 italic">Escuela Técnica Privada (2007)</p>
+            </div>
+            <div class="glass-card p-4 rounded-xl">
+                <h4 class="font-bold text-white">Gestión de Almacenes (Nivel 3)</h4>
+                <p class="text-slate-500 italic">ACF Innove, INAEM (2025)</p>
             </div>
         </section>
-
 
     </main>
 
-
-    <footer class="py-20 bg-slate-900 border-t border-slate-800 text-center">
-        <h3 class="text-white font-bold mb-8 uppercase tracking-[0.3em] text-sm">¿Hablamos?</h3>
-        <div class="flex flex-wrap justify-center gap-4 mb-12">
+    <footer class="py-20 bg-slate-900 border-t border-slate-800 text-center px-6">
+        <h3 class="text-white font-bold mb-8 uppercase tracking-[0.3em] text-sm italic">¿Conectamos?</h3>
+        <div class="flex justify-center gap-6 mb-12">
             <a href="mailto:eamveurope@gmail.com" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 border border-white/10 hover:bg-red-500/20 hover:border-red-500/50 transition">
                 <i class="fas fa-envelope text-red-400"></i>
             </a>
@@ -227,9 +200,8 @@
                 <i class="fab fa-linkedin text-blue-400"></i>
             </a>
         </div>
-        <p class="text-slate-600 text-[10px] uppercase tracking-[0.5em]">Enrique Mejías Valero | Analista de Datos 2026</p>
+        <p class="text-slate-600 text-[10px] uppercase tracking-[0.5em]">Enrique Mejías Valero &copy; 2026</p>
     </footer>
-
 
 </body>
 </html>
