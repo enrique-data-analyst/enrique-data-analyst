@@ -20,6 +20,15 @@
             background: rgba(15, 23, 42, 0.8);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
+
+        .dashboard-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .dashboard-card:hover { 
+            transform: translateY(-10px); 
+            border-color: rgba(59, 130, 246, 0.5); 
+            box-shadow: 0 20px 40px -20px rgba(59, 130, 246, 0.3); 
+        }
+        .lang-btn { cursor: pointer; transition: all 0.3s; opacity: 0.5; }
+        .lang-btn.active { opacity: 1; color: #3b82f6; font-weight: bold; }
     </style>
 </head>
 <body class="text-slate-300 antialiased">
@@ -29,43 +38,60 @@
             <span class="text-white font-bold text-lg tracking-tight">Enrique Mejías</span>
             
             <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
-                <a href="#perfil" class="hover:text-blue-400 transition">Sobre mí</a>
-                <a href="#proyectos" class="hover:text-blue-400 transition">Proyectos</a>
-                <a href="#experiencia" class="hover:text-blue-400 transition">Experiencia</a>
+                <a href="#perfil" class="hover:text-blue-400 transition lang" data-es="Sobre mí" data-en="About me">Sobre mí</a>
+                <a href="#proyectos" class="hover:text-blue-400 transition lang" data-es="Proyectos" data-en="Projects">Proyectos</a>
+                <a href="#experiencia" class="hover:text-blue-400 transition lang" data-es="Experiencia" data-en="Experience">Experiencia</a>
+                <a href="#educacion" class="hover:text-blue-400 transition lang" data-es="Educación" data-en="Education">Educación</a>
             </div>
 
-            <a href="#contacto" class="bg-green-600 hover:bg-green-500 text-white px-6 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition shadow-lg shadow-green-900/20">
-                <i class="fab fa-whatsapp text-lg"></i>
-                <span>Contáctame</span>
-            </a>
+            <div class="flex items-center gap-4">
+                <div class="flex bg-slate-800 rounded-full px-3 py-1 border border-slate-700 text-[10px] font-bold">
+                    <button onclick="changeLang('es')" id="btn-es" class="lang-btn active px-2">ES</button>
+                    <span class="text-slate-600">|</span>
+                    <button onclick="changeLang('en')" id="btn-en" class="lang-btn px-2">EN</button>
+                </div>
+                <a href="#contacto" class="bg-green-600 hover:bg-green-500 text-white px-5 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition shadow-lg shadow-green-900/20">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span class="lang" data-es="Contáctame" data-en="Contact me">Contáctame</span>
+                </a>
+            </div>
         </div>
     </nav>
 
-    <header class="bg-slate-900/50 py-16 px-6">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    <header class="bg-slate-900/50 py-16 px-6 border-b border-slate-800">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
+            
             <div class="w-44 h-44 rounded-2xl overflow-hidden border-2 border-slate-700 shadow-2xl flex-shrink-0">
                 <img src="foto-perfil.png" alt="Enrique Mejías" class="w-full h-full object-cover">
             </div>
             
-            <div class="text-center md:text-left flex-1">
+            <div class="text-center md:text-left flex flex-col items-center md:items-start max-w-lg">
                 <h1 class="text-4xl font-bold text-white mb-2">Enrique Mejías Valero</h1>
-                <p class="text-blue-400 text-xl font-medium mb-6 uppercase tracking-widest leading-tight">
+                <p class="text-blue-400 text-xl font-medium mb-4 uppercase tracking-widest leading-tight lang" 
+                   data-es="Analista de Datos Junior | Business Analyst Junior" 
+                   data-en="Junior Data Analyst | Junior Business Analyst">
                     Analista de Datos Junior | Business Analyst Junior
                 </p>
                 
-                <div class="glass-card p-4 rounded-xl border border-white/10 inline-block w-full md:w-auto">
-                    <p class="text-[10px] uppercase tracking-widest text-slate-500 mb-3 font-bold text-center md:text-left">
-                        Descarga / Download:
-                    </p>
-                    <div class="flex flex-wrap justify-center md:justify-start gap-3">
-                        <a href="curriculum-es.pdf" download="Enrique_Mejias_Analista_Datos_ES.pdf" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition flex items-center gap-2 text-xs font-semibold">
-                            <i class="fas fa-file-pdf"></i> CV ESPAÑOL
-                        </a>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-8 text-sm text-slate-400">
+                    <span class="flex items-center gap-2"><i class="fas fa-id-card text-blue-500"></i> <span class="lang" data-es="Carnet B" data-en="Driver's License (B)">Carnet B</span></span>
+                    <span class="flex items-center gap-2"><i class="fas fa-car text-blue-500"></i> <span class="lang" data-es="Coche propio" data-en="Own car">Coche propio</span></span>
+                    <span class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-blue-500"></i> <span class="lang" data-es="Zaragoza, España" data-en="Zaragoza, Spain">Zaragoza, España</span></span>
+                </div>
 
-                        <a href="curriculum-en.pdf" download="Enrique_Mejias_Data_Analyst_EN.pdf" class="bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg transition flex items-center gap-2 text-xs font-semibold border border-slate-500/30">
-                            <i class="fas fa-file-pdf text-blue-400"></i> CV ENGLISH
-                        </a>
-                    </div>
+                <div class="glass-card p-5 rounded-2xl border border-white/10 w-full shadow-xl bg-slate-800/40">
+                    <p class="text-[10px] uppercase tracking-[0.3em] text-blue-400 mb-4 font-bold text-center lang" data-es="Descarga" data-en="Download">
+                        Descarga / Download
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+    <a href="Enrique_Mejias_Analista_Datos_ES.pdf" download="Enrique_Mejias_Analista_Datos_ES.pdf" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-xl transition flex items-center justify-center gap-2 text-xs font-bold shadow-lg shadow-blue-900/30">
+        <i class="fas fa-file-pdf"></i> CV ESPAÑOL
+    </a>
+
+    <a href="Enrique_Mejias_Data_Analyst_EN.pdf" download="Enrique_Mejias_Data_Analyst_EN.pdf" class="bg-slate-700 hover:bg-slate-600 text-white px-5 py-2 rounded-xl transition flex items-center justify-center gap-2 text-xs font-bold border border-slate-500/30">
+        <i class="fas fa-file-pdf text-blue-400"></i> CV ENGLISH
+    </a>
+</div>
                 </div>
             </div>
         </div>
@@ -74,64 +100,226 @@
     <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
 
         <section id="perfil" class="glass-card p-8 rounded-2xl">
-            <h2 class="text-2xl font-bold text-white mb-4 section-title">Perfil Profesional</h2>
-            <div class="space-y-4 leading-relaxed">
+            <h2 class="text-2xl font-bold text-white mb-4 section-title lang" data-es="Perfil Profesional" data-en="Professional Profile">Perfil Profesional</h2>
+            <div class="space-y-4 leading-relaxed lang" 
+                 data-es="<p>Analista de Datos Junior con sólida base en contabilidad, operaciones y logística, y formación técnica en informática e inteligencia artificial aplicada. Experiencia real en el análisis, limpieza e interpretación de datos operativos y financieros.</p><p>He trabajado con <strong>Excel avanzado, Google Sheets y sistemas ERP (SAP, NUBOX)</strong> para el análisis de KPIs, elaboración de reportes y control financiero.</p><p>Actualmente me encuentro en formación especializada en <strong>Power BI, SQL y Python</strong> para la visualización y explotación masiva de datos.</p>"
+                 data-en="<p>Junior Data Analyst with a solid background in accounting, operations, and logistics, along with technical training in IT and applied AI. Real-world experience in analyzing, cleaning, and interpreting operational and financial data.</p><p>I have worked with <strong>Advanced Excel, Google Sheets, and ERP systems (SAP, NUBOX)</strong> for KPI analysis, reporting, and financial control.</p><p>Currently, I am undergoing specialized training in <strong>Power BI, SQL, and Python</strong> for data visualization and large-scale data exploitation.</p>">
                 <p>Analista de Datos Junior con sólida base en contabilidad, operaciones y logística, y formación técnica en informática e inteligencia artificial aplicada.</p>
-                <p>He trabajado con <strong>Excel avanzado, Google Sheets y sistemas ERP (SAP, NUBOX)</strong> para el análisis de KPIs, elaboración de reportes y control financiero.</p>
-                <p>Actualmente me encuentro en formación especializada en <strong>Power BI, SQL y Python</strong>.</p>
             </div>
         </section>
 
         <section id="proyectos" class="space-y-8">
-            <h2 class="text-2xl font-bold text-white mb-6 section-title">Proyectos de Análisis</h2>
+            <h2 class="text-2xl font-bold text-white mb-6 section-title lang" data-es="Proyectos de Análisis" data-en="Analysis Projects">Proyectos de Análisis</h2>
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="glass-card p-6 rounded-2xl border-t-2 border-t-blue-500/30 hover:bg-white/5 transition">
-                    <h3 class="font-bold text-white mb-2">Análisis de Operaciones y Rentabilidad</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed mb-4">Procesamiento de un dataset de 10,000 registros para identificar patrones de venta.</p>
-                    <a href="https://github.com/enrique-data-analyst/Analisis-Inventario-POWERBI" target="_blank" class="text-blue-400 text-[10px] uppercase font-bold tracking-widest hover:text-white transition">Ver en GitHub →</a>
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="fas fa-chart-pie text-blue-400 text-2xl"></i>
+                        <span class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded-md border border-blue-500/20">Excel & BI</span>
+                    </div>
+                    <h3 class="font-bold text-white mb-2 lang" data-es="Análisis de Operaciones y Rentabilidad" data-en="Operations & Profitability Analysis">Análisis de Operaciones y Rentabilidad</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4 lang" 
+                       data-es="Procesamiento de un dataset de 10,000 registros para identificar patrones de venta y puntos de fuga de rentabilidad." 
+                       data-en="Processing of a 10,000-record dataset to identify sales patterns and profitability leaks.">Procesamiento de un dataset de 10,000 registros para identificar patrones de venta y puntos de fuga de rentabilidad.</p>
+                    <a href="https://github.com/enrique-data-analyst/analisis-inventario-productos" target="_blank" class="text-blue-400 text-[10px] uppercase font-bold tracking-widest hover:text-white transition lang" data-es="Ver en GitHub →" data-en="View on GitHub →">Ver en GitHub →</a>
                 </div>
+
                 <div class="glass-card p-6 rounded-2xl border-t-2 border-t-green-500/30 hover:bg-white/5 transition">
-                    <h3 class="font-bold text-white mb-2">Consultas SQL: Operaciones & Logística</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed mb-4">Análisis de rentabilidad, cálculo de Lead Time y rotación de stock.</p>
-                    <a href="https://github.com/enrique-data-analyst/practicas-sql" target="_blank" class="text-green-400 text-[10px] uppercase font-bold tracking-widest hover:text-white transition">Explorar Biblioteca SQL →</a>
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="fas fa-database text-green-400 text-2xl"></i>
+                        <span class="text-[10px] bg-green-500/10 text-green-400 px-2 py-1 rounded-md border border-blue-500/20">SQL</span>
+                    </div>
+                    <h3 class="font-bold text-white mb-2 lang" data-es="Consultas SQL: Operaciones & Logística" data-en="SQL Queries: Operations & Logistics">Consultas SQL: Operaciones & Logística</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4 lang" 
+                       data-es="Módulos avanzados: Análisis de rentabilidad, cálculo de <strong>Lead Time</strong> y control de rotación de inventario."
+                       data-en="Advanced modules: Profitability analysis, <strong>Lead Time</strong> calculation, and inventory turnover control.">Módulos avanzados: Análisis de rentabilidad, cálculo de Lead Time y control de rotación de inventario.</p>
+                    <a href="https://github.com/enrique-data-analyst/practicas-sql/tree/main" target="_blank" class="text-green-400 text-[10px] uppercase font-bold tracking-widest hover:text-white transition lang" data-es="Explorar Biblioteca SQL →" data-en="Explore SQL Library →">Explorar Biblioteca SQL →</a>
+                </div>
+            </div>
+
+            <div class="dashboard-card glass-card p-4 md:p-8 rounded-3xl overflow-hidden mt-10 border-2 border-blue-500/10 bg-gradient-to-br from-slate-800/50 to-slate-900/50">
+                <div class="flex flex-col lg:flex-row gap-8 items-center">
+                    <div class="w-full lg:w-2/3 rounded-xl overflow-hidden shadow-2xl border border-white/5">
+                        <img src="assets/img/dashboard.png" alt="Power BI Dashboard" class="w-full h-auto hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="w-full lg:w-1/3 space-y-4">
+                        <div class="flex items-center gap-2 text-blue-400 text-xs font-bold uppercase tracking-widest">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full animate-ping"></span>
+                            <span class="lang" data-es="Visualización de Datos BI" data-en="BI Data Visualization">Visualización de Datos BI</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Business Intelligence Dashboard</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed lang" 
+                           data-es="Integración visual de los datos procesados en SQL. Este panel permite filtrar por categoría y región."
+                           data-en="Visual integration of data processed in SQL. This dashboard allows filtering by category and region.">
+                            Integración visual de los datos procesados en SQL. Este panel permite filtrar por categoría y región.
+                        </p>
+                        <ul class="text-[11px] text-slate-500 space-y-1 py-2 lang"
+                            data-es="<li><i class='fas fa-check text-blue-500 mr-2'></i> Limpieza con Power Query</li><li><i class='fas fa-check text-blue-500 mr-2'></i> Modelado Relacional</li>"
+                            data-en="<li><i class='fas fa-check text-blue-500 mr-2'></i> Cleaning with Power Query</li><li><i class='fas fa-check text-blue-500 mr-2'></i> Relational Modeling</li>">
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Limpieza con Power Query</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Modelado Relacional</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="experiencia" class="space-y-8">
-            <h2 class="text-2xl font-bold text-white mb-6 section-title">Experiencia Profesional</h2>
-            <div class="glass-card p-8 rounded-2xl text-sm">
-                <h3 class="text-xl font-bold text-blue-400">Analista Contable</h3>
-                <p class="text-white mb-2">Constructora Continental Johan Barrera y Asociados (Chile)</p>
-                <p>Análisis del ciclo contable en ERP SAP y conciliaciones bancarias.</p>
+            <h2 class="text-2xl font-bold text-white mb-6 section-title lang" data-es="Experiencia Profesional" data-en="Professional Experience">Experiencia Profesional</h2>
+
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="flex flex-col md:flex-row justify-between mb-4 border-b border-slate-700 pb-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-400 lang" data-es="Analista Contable – Análisis de Datos Financieros" data-en="Accounting Analyst – Financial Data Analysis">Analista Contable – Análisis de Datos Financieros</h3>
+                        <p class="text-white">Constructora Continental Johan Barrera y Asociados (Chile)</p>
+                    </div>
+                    <span class="text-slate-500 font-mono text-sm mt-2 uppercase lang" data-es="Ago 2021 – Ago 2022" data-en="Aug 2021 – Aug 2022">Ago 2021 – Ago 2022</span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <ul class="text-sm space-y-2 lang"
+                        data-es="<li><i class='fas fa-check text-blue-500 mr-2'></i> Registro y análisis del ciclo contable en ERP SAP.</li><li><i class='fas fa-check text-blue-500 mr-2'></i> Conciliaciones bancarias y control presupuestario.</li>"
+                        data-en="<li><i class='fas fa-check text-blue-500 mr-2'></i> Recording and analysis of the accounting cycle in ERP SAP.</li><li><i class='fas fa-check text-blue-500 mr-2'></i> Bank reconciliations and budgetary control.</li>">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Registro y análisis del ciclo contable en ERP SAP.</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Conciliaciones bancarias y control presupuestario.</li>
+                    </ul>
+                    <div class="bg-blue-600/5 p-4 rounded-xl border border-blue-600/20 text-sm italic lang"
+                         data-es="Logros: Reducción tiempo de cierre -25% | Errores nómina -90% | Eficiencia +30%"
+                         data-en="Achievements: Reduced closing time by 25% | Payroll errors -90% | Efficiency +30%">
+                        Logros: Reducción tiempo de cierre -25% | Errores nómina -90% | Eficiencia +30%
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl border-l-4 border-l-green-600 text-sm">
+                <div class="flex flex-col md:flex-row justify-between mb-4">
+                    <h3 class="text-xl font-bold text-green-400 lang" data-es="Ejecutivo Multicanal – Datos Operativos" data-en="Multichannel Executive – Operational Data">Ejecutivo Multicanal – Datos Operativos</h3>
+                    <span class="text-slate-500 font-mono uppercase mt-2 md:mt-0 text-xs md:text-sm lang" data-es="Ene 2020 – Ene 2021" data-en="Jan 2020 – Jan 2021">Ene 2020 – Ene 2021</span>
+                </div>
+                <p class="text-white mb-4 italic">Randstad Chile S.A.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <p class="lang" data-es="<i class='fas fa-database text-green-600 mr-2'></i> Gestión y limpieza de bases en Excel/Sheets. Análisis de KPIs." data-en="<i class='fas fa-database text-green-600 mr-2'></i> Management and cleaning of databases in Excel/Sheets. KPI analysis."><i class="fas fa-database text-green-600 mr-2"></i> Gestión y limpieza de bases en Excel/Sheets. Análisis de KPIs.</p>
+                    <p class="bg-green-600/5 p-3 rounded-lg border border-green-600/20 italic lang" data-es="Eficiencia reportes +40% | Productividad +28%" data-en="Reporting efficiency +40% | Productivity +28%">Eficiencia reportes +40% | Productividad +28%</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6 rounded-2xl">
+                    <h3 class="font-bold text-white uppercase text-xs tracking-widest text-blue-400 mb-2">TXT Logística (España)</h3>
+                    <p class="text-slate-500 text-[10px] mb-3 lang" data-es="Jun 2025 – Sep 2025" data-en="Jun 2025 – Sep 2025">Jun 2025 – Sep 2025</p>
+                    <p class="text-sm text-slate-300 lang" data-es="Control de incidencias operativas. Logro: Respuesta +35% y Satisfacción 92%." data-en="Control of operational incidents. Achievement: Response +35% and Satisfaction 92%.">Control de incidencias operativas. Logro: Respuesta +35% y Satisfacción 92%.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-orange-600">
+                    <h3 class="font-bold text-white uppercase text-xs tracking-widest text-orange-400 mb-2">Amazon Road Spain</h3>
+                    <p class="text-slate-500 text-[10px] mb-3 lang" data-es="Oct 2025 – Ene 2026" data-en="Oct 2025 – Jan 2026">Oct 2025 – Ene 2026</p>
+                    <p class="text-sm text-slate-300 lang" data-es="Uso de WMS y escaneo. Logro: 98% precisión y +15% objetivos diarios." data-en="Use of WMS and scanning. Achievement: 98% accuracy and +15% daily goals.">Uso de WMS y escaneo. Logro: 98% precisión y +15% objetivos diarios.</p>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl border-l-4 border-l-blue-500 relative overflow-hidden">
+                <i class="fas fa-file-invoice-dollar absolute -bottom-4 -right-4 text-white/5 text-9xl"></i>
+                <div class="flex flex-col md:flex-row justify-between mb-6 border-b border-slate-700/50 pb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white lang" data-es="Analista Contable Senior <span class='text-blue-400'>| ERP NUBOX</span>" data-en="Senior Accounting Analyst <span class='text-blue-400'>| ERP NUBOX</span>">Analista Contable Senior <span class="text-blue-400">| ERP NUBOX</span></h3>
+                        <p class="text-slate-300 font-medium mt-1">Pintuvial C.A. (Venezuela)</p>
+                    </div>
+                    <span class="text-blue-400 text-xs font-mono border border-blue-600/30 px-3 py-1 rounded-full h-fit mt-3 md:mt-0 w-fit lang" data-es="Oct 2012 – Mar 2019" data-en="Oct 2012 – Mar 2019">Oct 2012 – Mar 2019</span>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 space-y-4 text-sm">
+                        <p class="text-slate-400 lang" data-es="Análisis de datos contables, financieros y de costos. Preparación técnica para auditorías y licitaciones." data-en="Analysis of accounting, financial, and cost data. Technical preparation for audits and tenders.">Análisis de datos contables, financieros y de costos. Preparación técnica para auditorías y licitaciones.</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 lang" 
+                            data-es="<li><i class='fas fa-check text-blue-500 mr-2'></i> Ciclo contable completo y tributos.</li><li><i class='fas fa-check text-blue-500 mr-2'></i> Análisis de costos e inventarios.</li>"
+                            data-en="<li><i class='fas fa-check text-blue-500 mr-2'></i> Full accounting cycle and taxes.</li><li><i class='fas fa-check text-blue-500 mr-2'></i> Cost and inventory analysis.</li>">
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Ciclo contable completo y tributos.</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i> Análisis de costos e inventarios.</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="bg-white/5 border border-white/10 p-2 rounded-lg">
+                            <p class="text-lg font-bold text-white">$2.5M <span class="text-[10px] text-blue-400">USD</span></p>
+                            <p class="text-[9px] text-slate-500 uppercase lang" data-es="12 Licitaciones ganadas" data-en="12 Tenders won">12 Licitaciones ganadas</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-2 rounded-lg">
+                            <p class="text-lg font-bold text-white">45%</p>
+                            <p class="text-[9px] text-slate-500 uppercase lang" data-es="Ahorro en conciliación" data-en="Savings in reconciliation">Ahorro en conciliación</p>
+                        </div>
+                        <div class="bg-green-600/10 border border-green-600/20 p-2 rounded-lg text-center">
+                            <p class="text-[10px] text-green-400 font-bold italic lang" data-es="Cero observaciones Auditoría" data-en="Zero audit findings">Cero observaciones Auditoría</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl flex justify-between items-center">
+                <div>
+                    <h3 class="font-bold text-white italic text-lg lang" data-es="Inversor Financiero Digital" data-en="Digital Financial Investor">Inversor Financiero Digital</h3>
+                    <p class="text-slate-500 text-[10px] uppercase lang" data-es="Binance | 2021 – Actualidad" data-en="Binance | 2021 – Present">Binance | 2021 – Actualidad</p>
+                </div>
+                <i class="fab fa-bitcoin text-yellow-500/20 text-4xl"></i>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-3 gap-6 text-center">
+            <div class="glass-card p-6 rounded-2xl">
+                <i class="fas fa-microchip text-blue-400 text-3xl mb-4"></i>
+                <h4 class="font-bold text-white mb-2 uppercase text-xs tracking-widest lang" data-es="IA e Innovación" data-en="AI & Innovation">IA e Innovación</h4>
+                <p class="text-xs text-slate-400 lang" data-es="ChatGPT, Gemini, Grok, Claude e IA aplicadas a productividad y análisis." data-en="ChatGPT, Gemini, Grok, Claude and AI applied to productivity and analysis.">ChatGPT, Gemini, Grok, Claude e IA aplicadas a productividad y análisis.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl">
+                <i class="fas fa-chart-pie text-purple-400 text-3xl mb-4"></i>
+                <h4 class="font-bold text-white mb-2 uppercase text-xs tracking-widest lang" data-es="Análisis y BI" data-en="Analysis & BI">Análisis y BI</h4>
+                <p class="text-xs text-slate-400 lang" data-es="Excel Avanzado, Power BI, SQL, Python (Inicial), SAP/NUBOX." data-en="Advanced Excel, Power BI, SQL, Python (Basics), SAP/NUBOX.">Excel Avanzado, Power BI, SQL, Python (Inicial), SAP/NUBOX.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl">
+                <i class="fas fa-language text-green-400 text-3xl mb-4"></i>
+                <h4 class="font-bold text-white mb-2 uppercase text-xs tracking-widest lang" data-es="Idiomas" data-en="Languages">Idiomas</h4>
+                <p class="text-xs text-slate-400 lang" data-es="Español (Nativo) | Inglés (Intermedio)." data-en="Spanish (Native) | English (Intermediate).">Español (Nativo) | Inglés (Intermedio).</p>
+            </div>
+        </section>
+
+        <section id="educacion" class="space-y-8">
+            <h2 class="text-2xl font-bold text-white mb-6 section-title lang" data-es="Educación y Formación" data-en="Education & Training">Educación y Formación</h2>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+                <div class="glass-card p-4 rounded-xl border-l-4 border-l-blue-500">
+                    <h4 class="font-bold text-white lang" data-es="IA Generativa y Análisis de Datos" data-en="Generative AI & Data Analysis">IA Generativa y Análisis de Datos</h4>
+                    <p class="text-slate-500 italic">Grupo Piquer, INAEM (2026)</p>
+                </div>
+                <div class="glass-card p-4 rounded-xl">
+                    <h4 class="font-bold text-white lang" data-es="Licenciatura en Contaduría Pública" data-en="Bachelor in Public Accounting">Licenciatura en Contaduría Pública</h4>
+                    <p class="text-slate-500 italic">Universidad de Carabobo (2014)</p>
+                </div>
+                <div class="glass-card p-4 rounded-xl">
+                    <h4 class="font-bold text-white lang" data-es="Técnico Medio en Informática" data-en="Technical Degree in Computer Science">Técnico Medio en Informática</h4>
+                    <p class="text-slate-500 italic">Escuela Técnica Privada (2007)</p>
+                </div>
+                <div class="glass-card p-4 rounded-xl">
+                    <h4 class="font-bold text-white lang" data-es="Gestión de Almacenes (Nivel 3)" data-en="Warehouse Management (Level 3)">Gestión de Almacenes (Nivel 3)</h4>
+                    <p class="text-slate-500 italic">ACF Innove, INAEM (2025)</p>
+                </div>
             </div>
         </section>
 
     </main>
 
     <footer id="contacto" class="py-20 bg-slate-900 border-t border-slate-800 text-center px-6">
-        <h2 class="text-2xl font-bold text-white mb-10 section-title inline-block">Contacto</h2>
+        <h2 class="text-2xl font-bold text-white mb-10 section-title inline-block lang" data-es="Contacto" data-en="Contact">Contacto</h2>
         
         <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
             <a href="https://wa.me/34611245131" target="_blank" class="glass-card p-6 rounded-2xl hover:border-green-500/50 transition group">
                 <i class="fab fa-whatsapp text-3xl text-green-500 mb-4 group-hover:scale-110 transition"></i>
                 <h4 class="text-white font-bold text-sm mb-1">WhatsApp</h4>
-                <p class="text-xs text-slate-500">Escríbeme ahora</p>
                 <p class="text-blue-400 mt-2 text-sm">+34 611 245 131</p>
             </a>
 
             <a href="mailto:eamveurope@gmail.com" class="glass-card p-6 rounded-2xl hover:border-red-500/50 transition group">
                 <i class="fas fa-envelope text-3xl text-red-400 mb-4 group-hover:scale-110 transition"></i>
                 <h4 class="text-white font-bold text-sm mb-1">Email</h4>
-                <p class="text-xs text-slate-500">Envíame un correo</p>
                 <p class="text-blue-400 mt-2 text-sm">eamveurope@gmail.com</p>
             </a>
 
             <a href="https://www.linkedin.com/in/enrique-mejías" target="_blank" class="glass-card p-6 rounded-2xl hover:border-blue-500/50 transition group">
                 <i class="fab fa-linkedin text-3xl text-blue-400 mb-4 group-hover:scale-110 transition"></i>
                 <h4 class="text-white font-bold text-sm mb-1">LinkedIn</h4>
-                <p class="text-xs text-slate-500">Conectar perfil</p>
-                <p class="text-blue-400 mt-2 text-sm">Ver perfil</p>
+                <p class="text-blue-400 mt-2 text-sm lang" data-es="Ver perfil" data-en="View profile">Ver perfil</p>
             </a>
         </div>
         
@@ -141,6 +329,31 @@
     <a href="https://wa.me/34611245131" target="_blank" class="fixed bottom-6 right-6 bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-500 transition-all z-50">
         <i class="fab fa-whatsapp text-2xl"></i>
     </a>
+
+    <script>
+        function changeLang(lang) {
+            // Cambiar todos los elementos con clase .lang
+            document.querySelectorAll('.lang').forEach(el => {
+                const translation = el.getAttribute(`data-${lang}`);
+                if (translation) {
+                    el.innerHTML = translation;
+                }
+            });
+
+            // Actualizar estilo de los botones
+            document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            
+            // Guardar preferencia para la próxima visita
+            localStorage.setItem('preferredLang', lang);
+        }
+
+        // Cargar idioma al iniciar
+        window.onload = () => {
+            const savedLang = localStorage.getItem('preferredLang') || 'es';
+            changeLang(savedLang);
+        };
+    </script>
 
 </body>
 </html>
