@@ -1,40 +1,43 @@
-# Hola, soy Enrique Mejías 👋
+# Enrique Mejías | Business Solutions Analyst & ERP Implementation 👋
 
-### Analista de Datos Junior | Business Analyst Junior 📊
+### Especialista en Consultoría de Negocio, Nómina y Optimización Digital 📊
 
-Especialista en transformar datos complejos en decisiones estratégicas. Mi enfoque une la **precisión contable**, la **eficiencia logística** y la **potencia de la Inteligencia Artificial**.
-
----
-
-### 🌐 [Visita mi Portafolio Web Interactivo](https://enrique-data-analyst.vercel.app/) 🚀
+Licenciado en Contaduría con experiencia internacional, especializado en transformar procesos operativos en ventajas competitivas. Mi enfoque une la **precisión contable**, la **gestión avanzada de ERP (SAP/Nubox)** y la **potencia de la Inteligencia Artificial** para optimizar el ciclo de vida del empleado y el cierre financiero.
 
 ---
 
-### 🚀 Proyectos Destacados
-
-#### 1. [Optimización de Logística y Tiempos (SQL)](https://github.com/enrique-data-analyst/practicas-sql)
-- **El Desafío:** Medir la eficiencia operativa y rentabilidad en un entorno de retail y logística.
-- **La Solución:** Desarrollo de consultas avanzadas para calcular el **Lead Time**, rotación de stock y márgenes de beneficio.
-- **Módulos clave:** Rentabilidad, Lead Time y Gestión de Stock.
-
-#### 2. [Business Intelligence & Dashboarding (Power BI)](https://github.com/enrique-data-analyst/Analisis-Inventario-POWERBI)
-- **Insight Clave:** Visualización interactiva para el control de inventarios y análisis de ventas.
-- **Técnicas:** Limpieza de datos (ETL) con Power Query, modelado relacional y métricas DAX para KPIs de rendimiento.
+### 🌐 [Visita mi Portafolio Profesional Interactivo](https://enrique-data-analyst.vercel.app/) 🚀
 
 ---
 
-### 🛠️ Mi Stack Tecnológico
+### 🚀 Áreas de Especialización y Proyectos
 
-| Área | Tecnologías |
+#### 1. [Implantación de Soluciones ERP & Gestión de Nómina](https://github.com/enrique-data-analyst/enrique-data-analyst)
+- **El Desafío:** Digitalizar y automatizar ciclos contables y de nómina en entornos multimoneda.
+- **La Solución:** Configuración avanzada de módulos en **SAP** y **Nubox**, reduciendo tiempos de cierre en un **25%** y errores de nómina en un **90%**.
+- **Impacto:** Consultoría técnica para licitaciones internacionales ($2.5M USD) y cumplimiento normativo.
+
+#### 2. [Business Intelligence para la Toma de Decisiones (Power BI)](https://github.com/enrique-data-analyst/Analisis-Inventario-POWERBI)
+- **Insight Clave:** Creación de dashboards estratégicos para el control de rentabilidad y KPIs de productividad.
+- **Técnicas:** Modelado relacional, métricas DAX para KPIs de negocio y limpieza de datos (ETL) orientada a la eficiencia operativa.
+
+#### 3. [Arquitectura de Datos y SQL para Logística](https://github.com/enrique-data-analyst/practicas-sql)
+- **Optimización:** Desarrollo de consultas SQL para el cálculo de **Lead Time** y rotación de stock, integrando datos de sistemas WMS y ERP.
+
+---
+
+### 🛠️ Mi Stack Tecnológico & Expertise
+
+| Área | Tecnologías & Herramientas |
 | :--- | :--- |
-| **Análisis de Datos** | Excel Avanzado, SQL (Server/Postgres), Python (Inicial) |
-| **Visualización** | Power BI, Google Looker Studio |
-| **ERP & Gestión** | SAP, NUBOX, WMS (Amazon Road) |
-| **Innovación** | IA Generativa (ChatGPT, Claude, Gemini) para análisis y automatización |
+| **Sistemas ERP** | **SAP (FICO/HR)**, **NUBOX**, Configuración de Nómina |
+| **Consultoría BI** | **Power BI**, SQL (Server/Postgres), Excel Avanzado (VBA/Macros) |
+| **Gestión Operativa** | WMS (Amazon Road), Análisis de Procesos, Licitaciones |
+| **Innovación & IA** | **IA Generativa** (ChatGPT, Claude, Gemini) para automatización de flujos y reportes |
 
 ---
 
-### 📫 Conectemos
+### 📫 Conectemos para transformar procesos
 - **LinkedIn:** [Enrique Mejías Valero](https://www.linkedin.com/in/enrique-mejías)
 - **WhatsApp:** [+34 611 24 51 31](https://wa.me/34611245131)
 - **Email:** eamveurope@gmail.com
@@ -45,3 +48,5 @@ Especialista en transformar datos complejos en decisiones estratégicas. Mi enfo
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=enrique-data-analyst&show_icons=true&theme=tokyonight" alt="Estadísticas de Enrique" />
 </p>
+
+
